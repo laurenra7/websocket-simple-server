@@ -25,7 +25,7 @@ The simplest way to start the server is to run:
 ./gradlew bootRun
 ```
 
-You can connect to it at `ws://localhost:8090/socket`.
+You can connect to it at **ws://localhost:8090/socket**.
 
 ## Run stand-alone server from a .jar file
 
@@ -85,7 +85,7 @@ Otherwise, run it with the default name:
 java -jar build/libs/websocket-simple-server-0.0.1-SNAPSHOT.jar
 ```
 
-You can connect to it at `ws://localhost:8090/socket`.
+You can connect to it at **ws://localhost:8090/socket**.
 
 ## Run on Tomcat server
 
@@ -189,7 +189,7 @@ path of a running Tomcat server; for example to `/usr/local/tomcat/webapps`.
 The application should deploy.
 
 You should be able to connect to it at `ws://{server name}:{port}/websocket-test/socket`.
-If running locally, it's at `ws://localhost:8090/socket`.
+If running locally, it's at **ws://localhost:8090/socket**.
 
 Note: if it doesn't deploy, check the `webapps` directory to see if it unpacked
 the .war file. Check that the attributes `unpackWars="true"` and
