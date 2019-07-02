@@ -1,11 +1,13 @@
 # websocket-simple-server
 
-This is a simple WebSocket server demo using Spring Boot. See the tutorial
+This is the **deploy-to-tomcat** branch of a simple WebSocket server demo
+using Spring Boot. See the tutorial
 [Creating a WebSocket Server with Spring Boot](https://www.nexmo.com/blog/2018/10/08/create-websocket-server-spring-boot-dr/)
 for details.
 
 This can run as a stand-alone server or compiled into a .war file and deployed
-on a Tomcat server. *By default it is configured to run stand-alone*.
+on a Tomcat server. *In this branch, __deploy-to-tomcat__, it is configured
+by default to be deployed and run in Tomcat*.
 
 ## Stand-alone server
 
