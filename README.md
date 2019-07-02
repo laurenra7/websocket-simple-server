@@ -18,13 +18,14 @@ in `src/main/resources/application.properties`. If the property is not set
 it will default to port 8080.
 
 ### Run server
+
 The simplest way to start the server is to run:
 
 ```
 ./gradlew bootRun
 ```
 
-You can connect to it at [http://localhost:8090/socket](http://localhost:8090/socket).
+You can connect to it at ws://localhost:8090/socket.
 
 ## Run stand-alone server from a .jar file
 
@@ -32,11 +33,19 @@ You can also build a .jar file to run the stand-alone server.
 
 ### Configure
 
-1. The server is set to run on port 8090 by configuring the property `server.port=8090`
+1. The default name of the application is derived from the name of the root
+project directory. It can be changed to something else with the `rootProject.name`
+property in `settings.gradle`:
+
+    ```
+    rootProject.name = 'websocket-simple-server'
+    ```
+
+2. The server is set to run on port 8090 by configuring the property `server.port=8090`
 in `src/main/resources/application.properties`. If the property is not set
 it will default to port 8080.
 
-2. (optional) Modify `build.gradle` and add a **bootJar** task to name the
+3. (optional) Modify `build.gradle` and add a **bootJar** task to name the
 generated .jar file `websocket-test.jar` rather than the default (which
 would be websocket-simple-server-0.0.1-SNAPSHOT.jar):
 
@@ -76,7 +85,7 @@ Otherwise, run it with the default name:
 java -jar build/libs/websocket-simple-server-0.0.1-SNAPSHOT.jar
 ```
 
-You can connect to it at [http://localhost:8090/socket](http://localhost:8090/socket).
+You can connect to it at ws://localhost:8090/socket.
 
 ## Run on Tomcat server
 
