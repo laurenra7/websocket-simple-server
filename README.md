@@ -5,18 +5,21 @@ This is a simple WebSocket server demo using Spring Boot. See the tutorial
 for details.
 
 This can run as a stand-alone server or compiled into a .war file and deployed
-on a Tomcat server. By default it is configured to run stand-alone.
+on a Tomcat server. __By default it is configured to run stand-alone__.
 
 ## Stand-alone server
+
 Quickly run the server and test it.
 
 ### Configure
+
 The server is set to run on port 8090 by configuring the property `server.port=8090`
 in `src/main/resources/application.properties`. If the property is not set
 it will default to port 8080.
 
 ### Run server
 The simplest way to start the server is to run:
+
 ```
 ./gradlew bootRun
 ```
@@ -24,6 +27,7 @@ The simplest way to start the server is to run:
 You can connect to it at [http://localhost:8090/socket](http://localhost:8090/socket).
 
 ## Run stand-alone server from a .jar file
+
 You can also build a .jar file to run the stand-alone server.
 
 ### Configure
@@ -33,7 +37,7 @@ in `src/main/resources/application.properties`. If the property is not set
 it will default to port 8080.
 
 2. (optional) Modify `build.gradle` and add a **bootJar** task to name the
-generated .jar file to `websocket-test.jar` rather than the default (which
+generated .jar file `websocket-test.jar` rather than the default (which
 would be websocket-simple-server-0.0.1-SNAPSHOT.jar):
 
     ```
@@ -47,8 +51,7 @@ would be websocket-simple-server-0.0.1-SNAPSHOT.jar):
 
 ### Build .jar file
 
-Build a .jar file that will run the server on the port specified in
-the `server.port` property in `src/main/resources/application.properties`.
+Build a .jar file that will run the server.
 
 ```
 ./gradlew assemble
@@ -58,7 +61,6 @@ or
 ./gradlew bootJar
 
 ```
-
 
 ### Run server from .jar file
 
@@ -74,10 +76,14 @@ Otherwise, run it with the default name:
 java -jar build/libs/websocket-simple-server-0.0.1-SNAPSHOT.jar
 ```
 
+You can connect to it at [http://localhost:8090/socket](http://localhost:8090/socket).
+
 ## Run on Tomcat server
+
 Build the application as a .war file and deploy it on a Tomcat server.
 
 ### Configure
+
 The server property `server.port=8090` in `src/main/resources/application.properties`
 is ignored. It will run on the port of the Tomcat server (default is 8080)
 and application context path (the application name). For example, if the
