@@ -5,7 +5,7 @@ This is a simple WebSocket server demo using Spring Boot. See the tutorial
 for details.
 
 This can run as a stand-alone server or compiled into a .war file and deployed
-on a Tomcat server. __By default it is configured to run stand-alone__.
+on a Tomcat server. *By default it is configured to run stand-alone*.
 
 ## Stand-alone server
 
