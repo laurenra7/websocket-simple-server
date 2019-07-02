@@ -1,19 +1,13 @@
 plugins {
 	id 'org.springframework.boot' version '2.1.6.RELEASE'
 	id 'java'
-    id 'war'
 }
 
 apply plugin: 'io.spring.dependency-management'
 
-
+/* bootJar task is still using deprecated archiveName property as of 2.1.6.RELEASE */
 bootJar {
-	archiveName 'websocket-me.jar'
-}
-
-/* bootWar task is still using deprecated archiveName property */
-bootWar {
-	archiveName 'websocket-test.war'
+	archiveName 'websocket-test.jar'
 }
 
 group = 'edu.byu.emergency'
@@ -24,11 +18,7 @@ repositories {
 	mavenCentral()
 }
 
-/* compileOnly is like Maven provided, requires java plugin */
-/* providedCompile is like Maven provided, requires war plugin */
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-websocket'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-//	providedCompile 'org.springframework.boot:spring-boot-starter-tomcat'
-	compileOnly 'org.springframework.boot:spring-boot-starter-tomcat'
 }
