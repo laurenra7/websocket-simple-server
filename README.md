@@ -7,6 +7,9 @@ for details.
 This can run as a stand-alone server or compiled into a .war file and deployed
 on a Tomcat server. *By default it is configured to run stand-alone*.
 
+The [deploy-to-tomcat](https://github.com/laurenra7/websocket-simple-server/tree/deploy-to-tomcat)
+branch is configured by default to deploy as a .war file on Tomcat.
+
 ## Stand-alone server
 
 Quickly run the server and test it.
